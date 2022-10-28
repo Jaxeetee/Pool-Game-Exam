@@ -9,18 +9,20 @@ public class UIManager : MonoBehaviour
     private List<UIPage> _uiPages = new();
 
 
-
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        OpenCanvas(StringManager.MAINMENU_UI);
     }
 
     public void OpenCanvas(string id)
     {
+        foreach (UIPage page in _uiPages)
+        {
+            page.ClosePage();
+        }
 
-        foreach(UIPage page in _uiPages)
+        foreach (UIPage page in _uiPages)
         {
             if (page.pageName == id)
             {
