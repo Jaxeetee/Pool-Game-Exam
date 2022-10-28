@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public static event Action onGameStart;
     public static event Action onGameStop;
+    public static event Action onAim;
 
     private void Awake()
     {

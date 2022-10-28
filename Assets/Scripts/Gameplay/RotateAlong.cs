@@ -11,7 +11,8 @@ public class RotateAlong : MonoBehaviour
     private float _rotationSensitivity;
 
     private Vector2 _mouseRot;
-
+    private Vector3 _targetRotation;
+    private Quaternion _lookRotation;
 
     public bool startRotating = false;
     // Start is called before the first frame update
@@ -39,11 +40,18 @@ public class RotateAlong : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _targetRotation = Vector3.Normalize(_target.position - transform.position);
+        _lookRotation = Quaternion.LookRotation(_targetRotation);
+        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * _rotationSensitivity);
+        
         if (startRotating)
+        {
+            InputManager.Instance.MouseDeltaMovement(ref _mouseRot);
+            // must change rotation due to mouse position/touch screen
+            transform.RotateAround(_target.position, Vector3.up, _rotationSensitivity * _mouseRot.x * Time.deltaTime);
+        }
 
-        InputManager.Instance.MouseDeltaMovement(ref _mouseRot);
-        // must change rotation due to mouse position/touch screen
-        transform.RotateAround(_target.position, Vector3.up, _rotationSensitivity * _mouseRot.x * Time.deltaTime);
+       
     }
 
     private void EnableRotatation()
