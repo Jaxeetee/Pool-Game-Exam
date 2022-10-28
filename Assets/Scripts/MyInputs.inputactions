@@ -1,1 +1,54 @@
-{}
+{
+    "name": "MyInputs",
+    "maps": [
+        {
+            "name": "PlayerMovements",
+            "id": "bf9d7018-7d1e-492c-968c-64b950eba117",
+            "actions": [
+                {
+                    "name": "Mouse Movement Position",
+                    "type": "PassThrough",
+                    "id": "ca31b14e-477e-40c4-bc59-2a9e01a378ec",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Mouse Movement Delta",
+                    "type": "PassThrough",
+                    "id": "a17bfcf4-ba97-4ba9-b197-a308b9ef4838",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c68040f4-5430-47d7-9ef7-002bcc16d48b",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mouse Movement Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a2adf2f4-30c1-47cd-af6e-e410ce0aa4c2",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mouse Movement Delta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
