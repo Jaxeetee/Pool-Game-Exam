@@ -20,7 +20,7 @@ public class RollBall : MonoBehaviour
 
             onCollide?.Invoke();
             //change 10f value to something based from how hard the cue has been hit
-            _rb.AddForce(-collision.transform.position.normalized * 10f, ForceMode.Impulse);
+            _rb.AddForce(-collision.transform.position.normalized * 20f, ForceMode.Impulse);
         }
     }
 }

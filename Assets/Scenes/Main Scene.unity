@@ -633,8 +633,6 @@ Transform:
   m_Children:
   - {fileID: 1862997127}
   - {fileID: 428139732}
-  - {fileID: 373320815}
-  - {fileID: 1778747404}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -756,51 +754,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.009999999
   m_Center: {x: -0.0000000018626451, y: -0.0000000027939673, z: 0.0000000032596286}
---- !u!1 &373320814
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 373320815}
-  - component: {fileID: 373320816}
-  m_Layer: 7
-  m_Name: Cueball place boundary Start
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &373320815
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373320814}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.64, y: 0, z: 0.1}
-  m_LocalScale: {x: 3.8227, y: 0.14921, z: 4.2151113}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 343070473}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &373320816
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373320814}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!43 &412994561
 Mesh:
   m_ObjectHideFlags: 0
@@ -2752,6 +2705,38 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &566792670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 566792671}
+  m_Layer: 0
+  m_Name: Cuettick parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &566792671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566792670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.001, y: 3.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8298685974697585688}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,6 +3229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f265e559e99dbc4e98755491c5cb79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cueStick: {fileID: 8298685974697357368}
+  _cueBallRB: {fileID: 4383677945343682319}
 --- !u!1 &934952671
 GameObject:
   m_ObjectHideFlags: 0
@@ -4733,7 +4720,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1715340001}
   - component: {fileID: 1715340005}
-  - component: {fileID: 1715340004}
   - component: {fileID: 1715340003}
   - component: {fileID: 1715340002}
   m_Layer: 5
@@ -4794,29 +4780,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1715340004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715340000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
 --- !u!223 &1715340005
 Canvas:
   m_ObjectHideFlags: 0
@@ -4838,51 +4801,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1778747403
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1778747404}
-  - component: {fileID: 1778747405}
-  m_Layer: 7
-  m_Name: Cueball place boundary MidGame
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1778747404
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778747403}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 0, z: 0.1}
-  m_LocalScale: {x: 11.563285, y: 0.14921, z: 4.2151113}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 343070473}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1778747405
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778747403}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1782561840
 GameObject:
   m_ObjectHideFlags: 0
@@ -5429,7 +5347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4383677945343589166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.52, y: 3.52, z: 0}
+  m_LocalPosition: {x: -2.52, y: 3.659, z: 0}
   m_LocalScale: {x: 11.091966, y: 11.091966, z: 11.091966}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5554,14 +5472,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8135581805692870560}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 3.456174, z: 0}
   m_LocalScale: {x: 33.94145, y: 35.711315, z: 29.825083}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &8135581805692870560
 GameObject:
   m_ObjectHideFlags: 0
@@ -5594,6 +5512,7 @@ GameObject:
   - component: {fileID: 8298685974699355897}
   - component: {fileID: 8298685974699355898}
   - component: {fileID: 8298685974699355899}
+  - component: {fileID: 8298685974699355900}
   m_Layer: 0
   m_Name: CueStick
   m_TagString: Stick
@@ -5609,12 +5528,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8298685974697357368}
   m_LocalRotation: {x: 0.012399958, y: 0.70699805, z: -0.012399942, w: 0.70699805}
-  m_LocalPosition: {x: -9.001, y: 3.99, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 566792671}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 2.01, y: 90, z: 0}
 --- !u!33 &8298685974698388536
 MeshFilter:
@@ -5713,3 +5632,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &8298685974699355900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8298685974697357368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64b45691c9352942bed90622fa5e7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cueBall: {fileID: 0}
+  _mouseDragSpeed: 5
